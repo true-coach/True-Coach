@@ -7,5 +7,6 @@ namespace TrueCoach.Controllers
 {
     public class ExerciseController
     {
+        private readonly IExerciseManager _context;
     }
 }
