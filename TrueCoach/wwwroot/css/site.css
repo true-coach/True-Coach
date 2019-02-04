@@ -21,7 +21,24 @@ html {
     font-size: 16px;
   }
 }
+#userLogin {
+    text-align: center;
+}
+#login{
+    text-align:center;
+}
 
+.jumbotron {
+    position: relative;
+    left: 11.5vw;
+    top: 10vw;
+    opacity: .9;
+    background-color: aqua;
+    border: .3vw solid rgb(245, 247, 227);
+    border-radius: 1vw 1vw;
+    width: 50vw;
+    box-shadow: 1vw 1vw grey;
+}
 .border-top {
   /*border-top: 1px solid #e5e5e5;*/
 }
@@ -52,6 +69,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+
+footer {
+    background-color: white;
 }
 .footer {
   position: absolute;
