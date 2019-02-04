@@ -7,5 +7,8 @@ namespace TrueCoach.Models
 {
     public class Workout
     {
+        public int ID { get; set; }
+        public WorkoutType workoutTypeID { get; set; }
+        public  Goal GoalID { get; set; }
     }
 }
