@@ -7,5 +7,7 @@ namespace TrueCoach.Models
 {
     public class Nutrition
     {
+        public int ID { get; set; }
+        public Goal GoalID { get; set; }
     }
 }
