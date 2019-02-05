@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace TrueCoach.Models
+﻿namespace TrueCoach.Models
 {
     public class Workout
     {
@@ -16,10 +11,9 @@ namespace TrueCoach.Models
 
     public enum Goals
     {
-        Strength,
+        Strength = 1,
         FatLoss,
         NoTime,
         Mobility
     }
 }
-
