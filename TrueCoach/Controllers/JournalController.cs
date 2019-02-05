@@ -55,7 +55,7 @@ namespace TrueCoach.Controllers
         //Post:Journal
         public async Task<IActionResult> Create([Bind("ID,Entry")]Journal Journal)
         {
-            if (Journal.Isvalid)
+            if (journal.Isvalid)
             {
                 await _context.CreateJOurnal(Journal);
                 return RedirectToAction(nameof(Index));

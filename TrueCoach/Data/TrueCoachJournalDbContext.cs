@@ -17,16 +17,9 @@ namespace TrueCoach.Data
 
             ModelBuilder.Entity<Profile>().HasKey(je => new { je.profileID, je.profile });
 
-            modelBuilder.Entity<journal>().HasData(
-                new Journal
-                {
-
-                }
-                
-                
-                )
+           
         }
     }
-    {
-    }
+    
+    
 }
