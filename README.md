@@ -5,9 +5,11 @@ True Coach brings health coaching on the go with a versatile approach to program
 
 ##Software Requirements 
 Please read out software requirements
+![.......](.......) 
+
 
 ##How the App Works
-A user 
+A user open the landing 
 
 
 ## Testing
