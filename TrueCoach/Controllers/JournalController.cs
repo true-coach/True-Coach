@@ -22,9 +22,24 @@ namespace TrueCoach.Controllers
 
             if (!string.IsNullOrEmpty(Entry))
             {
-                Journal=Journal.where(Journal =>)
-            }
-        }
+                Journal = Journal.where(Journal => Journal.Entry.ToLower().contains(journal.ToLower()));
 
+            }
+            return View(journal);
+        }
+        //Get Journal Details
+        public async Task <IActionResult> Details(int? id)
+        {
+            if(id== null)
+            {
+                return NotFound();
+            }
+            var journal =await _context.GetJournal((int)id);
+            if(journal == null)
+            {
+                return NotFound();
+            }
+
+        }
     }
 }
