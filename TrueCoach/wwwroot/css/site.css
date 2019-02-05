@@ -93,6 +93,16 @@ body {
     background-size: cover;
     
 }
+#carouselExampleSlidesOnly {
+    position: relative;
+    left: 18.5vw;
+    border-radius: 1vw 1vw;
+}
+.d-block w-50 h-50 {
+}
+.w-50 {
+    border-radius: 2vw;
+}
 
 footer {
     background-color: white;
