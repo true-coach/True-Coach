@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TrueCoach.Models.Interfaces;
+using TrueCoach.Models.Services;
 
 namespace TrueCoach
 {
@@ -37,6 +39,7 @@ namespace TrueCoach
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
            services.AddDistributedMemoryCache();
             services.AddSession();
+            services.AddScoped<IJournal, JournalServiceManagment>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

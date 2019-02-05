@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TrueCoach.Models;
 
 namespace TrueCoach.Data
 {
@@ -12,13 +13,8 @@ namespace TrueCoach.Data
         {
 
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
-            ModelBuilder.Entity<Profile>().HasKey(je => new { je.profileID, je.profile });
-
-           
-        }
+                 
+       public DbSet<journal> Journal { get; set; }
     }
     
     
