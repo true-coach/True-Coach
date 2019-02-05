@@ -1,19 +1,20 @@
-﻿@model IEnumerable<TrueCoach.Models.Workout>
+﻿@model List<Workout>
 @{
     ViewData["Title"] = "Display Workouts";
 }
-
-<h1></h1>
-
-@using (Html.("ViewWorkout", "List<Workout>", FormMethod.Post))
-{
-    <p>
-        Title: @Html.TextBox("UserName") <br />
-        <input type="submit" value="Enter" />
-        @ViewBag.Status
-    </p>
-}
-
-
-
-
+<div class="workoutResults">
+    @if (Model != null && Model.Any())
+    {
+        <h2>List of Workouts for: </h2>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.WorkoutType.ID - @item.WorkoutType.Name</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <h2>No workouts in list.</h2>
+    }
+</div>
