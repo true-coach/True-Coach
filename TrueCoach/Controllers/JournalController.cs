@@ -9,17 +9,20 @@ namespace TrueCoach.Controllers
     {
         private readonly IJournal _context;
 
-            public JournalController(IJournal context)
+            public JournalController(TrueCoachDbContext context)
         {
             _context = context;
         }
-        public async Task<IAsyncResult> Index(string Entry)
+
+        //Get:Journal
+
+        public async Task<IAsyncResult> Index()
         {
-            var Entry = await _context.GetEntry();
+            var TrueCoachDbContext = await _context.GetJournals();
 
             if (!string.IsNullOrEmpty(Entry))
             {
-                Entry=Entry.where()
+                Journal=Journal.where(Journal =>)
             }
         }
 
