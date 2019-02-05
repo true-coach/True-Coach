@@ -82,7 +82,13 @@ namespace TrueCoach.Controllers
             {
                 return NotFound();
             }
-            var journal =
+            var journal = await _context.GetJournal((int)id);
+            if(journal == null)
+            {
+                return NotFound();
+            }
+            return View(journal);
         }
+        //
     }
 }
