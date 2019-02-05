@@ -7,7 +7,8 @@
 
 }
 
-@*<div class="text-center">
+
+<div class="text-center">
         <h1 class="display-4">Welcome @Model. </h1>
         <div class="form-group">
             <form asp-action="ViewWorkout">
@@ -21,7 +22,7 @@
         </div>
 
 
-    </div>*@
+    </div>
 
 @using (Html.BeginForm("ViewWorkout", "Workout", FormMethod.Post))
 {
