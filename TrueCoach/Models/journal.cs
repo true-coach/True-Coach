@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace TrueCoach.Models
 {
-    public class journal
+    public class Journal
     {
         public int ID { get; set; }
-        public profileID ProfileID { get; set; }
+        public int ProfileID { get; set; }
         public string Entry { get; set; }
         public DateTime Date { get; set; }
         

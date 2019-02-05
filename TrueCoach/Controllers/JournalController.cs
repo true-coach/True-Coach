@@ -3,29 +3,31 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TrueCoach.Data;
+using TrueCoach.Models;
 using TrueCoach.Models.Interfaces;
 
 namespace TrueCoach.Controllers
 {
-    public class JournalController
+    public class JournalController:Controller
     {
         private readonly IJournal _context;
 
-            public JournalController(TrueCoachDbContext context)
+            public JournalController(IJournal context)
         {
             _context = context;
         }
 
         //Get:Journal
 
-        public async Task<IAsyncResult> Index()
+        public async Task<IActionResult> Index(string Entry)
         {
-            var TrueCoachDbContext = await _context.GetJournals();
+            var journal = await _context.GetJournals();
 
             if (!string.IsNullOrEmpty(Entry))
             {
-                journal = journal.where(Journal => Journal.Entry.ToLower().contains(journal.ToLower()));
-
+                journal = journal.Where(Journal => Journal.Entry.ToLower().Contains(Entry.ToLower()));
+                journal = journal.OrderByDescending(j => j.Entry);
             }
             return View(journal);
         }
@@ -41,7 +43,7 @@ namespace TrueCoach.Controllers
             {
                 return NotFound();
             }
-            return View(hotel);
+            return View(journal);
         }
 
         //Get: Create journal
@@ -51,16 +53,18 @@ namespace TrueCoach.Controllers
             return View();
         }
 
+        [HttpPost]
 
+        [ValidateAntiForgeryToken]
         //Post:Journal
-        public async Task<IActionResult> Create([Bind("ID,Entry")]Journal Journal)
+        public async Task<IActionResult> Create([Bind("ID,Entry")]Journal journal)
         {
-            if (journal.Isvalid)
+            if (ModelState.IsValid)
             {
-                await _context.CreateJOurnal(Journal);
+                await _context.CreateJournal(journal);
                 return RedirectToAction(nameof(Index));
             }
-            return View(Journal);
+            return View(journal);
         }
         //Get:Journal/Edit
         public async Task<IActionResult> Edit(int? id)
@@ -93,7 +97,7 @@ namespace TrueCoach.Controllers
         //Post:Journal Delete
         public async Task<IActionResult> Delete(int id)
         {
-            await _context.DeleteHotel(id);
+            await _context.DeleteJournal(id);
             return RedirectToAction(nameof(Index));
         }
         private bool journalExists(int id)
