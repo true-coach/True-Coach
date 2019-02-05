@@ -8,12 +8,12 @@ namespace TrueCoach.Models.Interfaces
     public interface IJournal
     {
         //creating Journal
-        Task CreateJournal(Journal journal);
+        Task CreateJournal(Journal Journal);
 
         Task<Journal> GetJournal(int id);
         Task<IEnumerable<Journal>> GetJournal();
         //updating Journal
-        Task updateJournal(Journal journal);
+        Task UpdateJournal(Journal Journal);
 
         //Deleting Journal
         Task DeleteJournal(int id);

@@ -12,6 +12,7 @@ namespace TrueCoach.Models.Services
     public class JournalServiceManagment : IJournal
     {
         private TrueCoachJournalDbContext _context { get; }
+
         public JournalServiceManagment(TrueCoachJournalDbContext context)
         {
             _context = context;
@@ -32,10 +33,10 @@ namespace TrueCoach.Models.Services
 
         public async Task<Journal> GetJournal(int id)
         {
-            return await _context.Journal.FirstOrDefaultAsync(journal => journal.ID == id);
+            return await _context.Journal.FirstOrDefaultAsync(journal => journal.ID==id);
         }
 
-        public async Task<IEnumerable<Journal>> GetJournals()
+        public async Task<IEnumerable<Journal>> GetJournal()
         {
             return await _context.Journal.ToListAsync();
         }
@@ -46,8 +47,8 @@ namespace TrueCoach.Models.Services
             await _context.SaveChangesAsync();
         }
 
-       
 
-     
+
+
     }
 }

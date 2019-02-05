@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace TrueCoach.Controllers
 
         public async Task<IActionResult> Index(string Entry)
         {
-            var journal = await _context.GetJournals();
+            var journal = await _context.GetJournal();
 
             if (!string.IsNullOrEmpty(Entry))
             {
@@ -80,6 +81,40 @@ namespace TrueCoach.Controllers
             }
             return View(journal);
         }
+
+        //Get Update
+        [HttpPost]
+
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult>Edit(int id,[Bind("ID,Entry")]Journal journal)
+        {
+             if(id != journal.ID)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _context.UpdateJournal(journal);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!JournalExists(journal.ID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(journal);
+
+        }
         //Get:Journal Delete
         public async Task<IActionResult> Delete(int? id)
         {
@@ -100,7 +135,7 @@ namespace TrueCoach.Controllers
             await _context.DeleteJournal(id);
             return RedirectToAction(nameof(Index));
         }
-        private bool journalExists(int id)
+        private bool JournalExists(int id)
         {
             var journal = _context.GetJournal((int)id);
             if(journal == null)
