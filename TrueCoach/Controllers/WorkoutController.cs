@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using TrueCoach.Models;
 
 namespace TrueCoach.Controllers
@@ -15,7 +13,8 @@ namespace TrueCoach.Controllers
         {
             return View();
         }
-        public List<Workout> GetWorkoutByGoal(Goals goal)
+
+        public List<Workout> GetWorkoutsByGoal(int goal)
         {
             string apiUrl = "https://localhost:44396/api/Workouts/" + (int)goal;
 
@@ -37,10 +36,13 @@ namespace TrueCoach.Controllers
             }
             return null;
         }
-        public IActionResult ViewWorkout(Goals goal)
+
+        public IActionResult ViewWorkout([Bind("WorkoutGoals")] Workout workoutModel)
         {
-            var workout = GetWorkoutByGoal(goal);
-            if (workout == null)
+            var goal = (int)workoutModel.WorkoutGoals;
+
+            var workoutList = GetWorkoutsByGoal(goal);
+            if (workoutList == null)
             {
                 ViewBag.Status = "Invalid workout";
             }
@@ -49,17 +51,13 @@ namespace TrueCoach.Controllers
                 ViewBag.Status = "Goals " + goal;
                 // this.HttpContext.Session.("TrueCoachUserID", (int)goal);
 
-                this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", (int)goal);
+                this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", goal);
 
                 //this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", );
 
-                return RedirectToAction("Index", "Workout");
-            }            
-        return null;
-        }
-        public IActionResult Results()
-            {
-                return View("Index");
+                return View("Index", workoutList);
             }
+            return null;
+        }
     }
 }

@@ -1,11 +1,11 @@
 ﻿@model TrueCoach.Models.Workout
-
+@using TrueCoach.Models
 
 @{
     ViewData["Title"] = "Home Page";
     Layout = "_Layout";
-
 }
+
 
 
 <div class="text-center">
@@ -29,7 +29,6 @@
 <p>
     <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
     <input type="submit" value="Enter" />
-    @ViewBag.Status
 </p>
 }
 
