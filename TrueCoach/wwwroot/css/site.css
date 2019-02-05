@@ -23,9 +23,13 @@ html {
 }
 #userLogin {
     text-align: center;
+    margin-bottom: 2vw;
+    font-family: 'Baloo Paaji', cursive;
 }
-#login{
-    text-align:center;
+#login {
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Baloo Paaji', cursive;
 }
 
 .jumbotron {
@@ -38,6 +42,25 @@ html {
     border-radius: 1vw 1vw;
     width: 50vw;
     box-shadow: 1vw 1vw grey;
+}
+#userRegister {
+    text-align: center;
+    margin-bottom: 2vw;
+    /*font-family: 'Lalezar', cursive;*/
+    font-family: 'Baloo Paaji', cursive;
+    /*font-family: 'Black Han Sans', sans-serif;*/
+    /*font-family: 'Paytone One', sans-serif;*/
+    /*font-family: 'Emblema One', cursive;*/
+}
+
+#register {
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Baloo Paaji', cursive;
+}
+.submitbtn {
+    margin-top: 1vw;
+    font-family: 'Baloo Paaji', cursive;
 }
 .border-top {
   /*border-top: 1px solid #e5e5e5;*/
@@ -75,7 +98,7 @@ footer {
     background-color: white;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
