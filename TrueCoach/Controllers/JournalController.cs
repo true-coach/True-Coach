@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace TrueCoach.Controllers
 
             if (!string.IsNullOrEmpty(Entry))
             {
-                Journal = Journal.where(Journal => Journal.Entry.ToLower().contains(journal.ToLower()));
+                journal = journal.where(Journal => Journal.Entry.ToLower().contains(journal.ToLower()));
 
             }
             return View(journal);
@@ -39,7 +40,49 @@ namespace TrueCoach.Controllers
             {
                 return NotFound();
             }
+            return View(hotel);
+        }
 
+        //Get: Create journal
+
+            public IActionResult create()
+        {
+            return View();
+        }
+
+
+        //Post:Journal
+        public async Task<IActionResult> Create([Bind("ID,Entry")]Journal Journal)
+        {
+            if (Journal.Isvalid)
+            {
+                await _context.CreateJOurnal(Journal);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(Journal);
+        }
+        //Get:Journal/Edit
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if(id== null)
+            {
+                return NotFound();
+            }
+            var journal = await _context.GetJournal((int)id);
+            if(journal == null)
+            {
+                return NotFound();
+            }
+            return View(journal);
+        }
+        //Get:Journal Delete
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var journal =
         }
     }
 }
