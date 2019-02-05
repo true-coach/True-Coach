@@ -89,6 +89,20 @@ namespace TrueCoach.Controllers
             }
             return View(journal);
         }
-        //
+        //Post:Journal Delete
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _context.DeleteHotel(id);
+            return RedirectToAction(nameof(Index));
+        }
+        private bool journalExists(int id)
+        {
+            var journal = _context.GetJournal((int)id);
+            if(journal == null)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
