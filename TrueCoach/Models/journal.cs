@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TrueCoach.Controllers
+namespace TrueCoach.Models
 {
-    public class GoalController
+    public class journal
     {
     }
 }
