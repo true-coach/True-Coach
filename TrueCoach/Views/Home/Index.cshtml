@@ -1,5 +1,4 @@
 ﻿@model TrueCoach.Models.Workout
-@using TrueCoach.Models
 
 @{
     ViewData["Title"] = "Home Page";
@@ -8,9 +7,9 @@
 
 @using (Html.BeginForm("ViewWorkout", "Workout", FormMethod.Post))
 {
-<p>
-    <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
-    <input type="submit" value="Enter" />
-</p>
+    <h2>Select Your Main Movement Focus:</h2>
+    <p>
+        <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
+        <input type="submit" value="Enter" />
+    </p>
 }
-
