@@ -19,7 +19,8 @@ namespace TrueCoach.Controllers
 
         public User GetUserByUserName(string user)
         {
-            string apiUrl = "http://localhost:64934/api/users/" + user;
+           string apiUrl = "https://localhost:44396/api/users/" + user;
+            //string apiUrl = "https://truecoachapi.azurewebsites.net/users/" + user;
 
             using (HttpClient client = new HttpClient())
             {
@@ -46,6 +47,8 @@ namespace TrueCoach.Controllers
             if (user == null)
             {
                 ViewBag.Status = "Invalid User";
+                return RedirectToAction("Index", "User");
+
             }
             else
             {
@@ -53,6 +56,7 @@ namespace TrueCoach.Controllers
                 this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", user.ID);
 
             }
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -82,9 +86,9 @@ namespace TrueCoach.Controllers
         public IActionResult CreateUser(string UserName)
         {
             var user = CreateUserByUserName(UserName);
-            //this.ControllerContext.HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
+            this.ControllerContext.HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
             HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
-           // TempData["TrueCoachUserID"] = user.UserName;
+           //TempData["TrueCoachUserID"] = user.UserName;
             return RedirectToAction("Index", "Home");
         }
         public IActionResult Register()
