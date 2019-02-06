@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,16 +11,33 @@ using TrueCoach.Models.Interfaces;
 
 namespace TrueCoach.Controllers
 {
-    public class JournalController:Controller
+    public class JournalController : Controller
     {
         private readonly IJournal _context;
+        //private object user;
 
-            public JournalController(IJournal context)
+        public JournalController(IJournal context)
         {
             _context = context;
         }
 
         //Get:Journal
+        public IActionResult Journal(string UserName)
+        {
+            if (UserName == null)
+            {
+                return RedirectToAction("Index", "User");
+            }
+
+            else
+            {
+                ViewBag.Status = "Welcome ";
+                //this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", user.ID);
+
+            }
+            return RedirectToAction("Index","Home");
+        }
+        
 
         public async Task<IActionResult> Index(string Entry)
         {
@@ -33,14 +51,14 @@ namespace TrueCoach.Controllers
             return View(journal);
         }
         //Get Journal Details
-        public async Task <IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
-            if(id== null)
+            if (id == null)
             {
                 return NotFound();
             }
-            var journal =await _context.GetJournal((int)id);
-            if(journal == null)
+            var journal = await _context.GetJournal((int)id);
+            if (journal == null)
             {
                 return NotFound();
             }
@@ -48,16 +66,16 @@ namespace TrueCoach.Controllers
         }
 
         //Get: Create journal
-
-            public IActionResult create()
+        public IActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
+        
 
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         //Post:Journal
+        [HttpPost]
         public async Task<IActionResult> Create([Bind("ID,Entry")]Journal journal)
         {
             if (ModelState.IsValid)
@@ -67,29 +85,27 @@ namespace TrueCoach.Controllers
             }
             return View(journal);
         }
+
         //Get:Journal/Edit
         public async Task<IActionResult> Edit(int? id)
         {
-            if(id== null)
+            if (id == null)
             {
                 return NotFound();
             }
             var journal = await _context.GetJournal((int)id);
-            if(journal == null)
+            if (journal == null)
             {
                 return NotFound();
             }
             return View(journal);
         }
 
-        //Get Update
+       
         [HttpPost]
-
-        [ValidateAntiForgeryToken]
-
-        public async Task<IActionResult>Edit(int id,[Bind("ID,Entry")]Journal journal)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Entry")]Journal journal)
         {
-             if(id != journal.ID)
+            if (id != journal.ID)
             {
                 return NotFound();
             }
@@ -115,6 +131,7 @@ namespace TrueCoach.Controllers
             return View(journal);
 
         }
+
         //Get:Journal Delete
         public async Task<IActionResult> Delete(int? id)
         {
@@ -123,13 +140,14 @@ namespace TrueCoach.Controllers
                 return NotFound();
             }
             var journal = await _context.GetJournal((int)id);
-            if(journal == null)
+            if (journal == null)
             {
                 return NotFound();
             }
             return View(journal);
         }
         //Post:Journal Delete
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             await _context.DeleteJournal(id);
@@ -138,11 +156,15 @@ namespace TrueCoach.Controllers
         private bool JournalExists(int id)
         {
             var journal = _context.GetJournal((int)id);
-            if(journal == null)
+            if (journal == null)
             {
                 return false;
             }
             return true;
         }
+
+
     }
 }
+
+

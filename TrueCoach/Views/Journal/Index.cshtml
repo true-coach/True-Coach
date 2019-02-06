@@ -5,17 +5,14 @@
     Layout = "_Layout";
 }
 <h4>You have @Model.Count() saved workout in the system.</h4>
-<div>
-    <form asp-controller="Journal" asp-action="Index">
-        <p>
-            Search By Name: <input type="text" name="EnterName">
-            <input type="submit" value="Filter" />
-        </p>
-    </form>
-</div>
+
+<form asp-controller="Journal" asp-action="Index">
+   
+</form>
 <p>
-    <a asp-action="Create">Create New</a>
+   <a asp-action="Create">Create Journal</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
