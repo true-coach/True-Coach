@@ -1,0 +1,17 @@
+﻿@model TrueCoach.Models.Journal
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_Layout";
+}
+
+<h3>My Journal: </h3>
+
+<div>
+    @Html.DisplayFor(model => model.Entry)
+    
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
