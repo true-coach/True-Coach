@@ -53,7 +53,7 @@ namespace TrueCoach.Controllers
                 this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", user.ID);
 
             }
-            return View("Index");
+            return RedirectToAction("Index", "Home");
         }
 
         public User CreateUserByUserName(string user)
