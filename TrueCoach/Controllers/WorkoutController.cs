@@ -18,8 +18,6 @@ namespace TrueCoach.Controllers
         {
            string apiUrl = "https://localhost:44396/api/Workouts/" + (int)goal;
            //string apiUrl = "https://truecoachapi.azurewebsites.net/";
-
-
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(apiUrl);

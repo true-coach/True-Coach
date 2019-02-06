@@ -22,7 +22,6 @@ namespace TrueCoach.Controllers
            string apiUrl = "https://localhost:44396/api/users/" + user;
             //string apiUrl = "https://truecoachapi.azurewebsites.net/users/" + user;
 
-
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(apiUrl);
@@ -63,7 +62,7 @@ namespace TrueCoach.Controllers
 
         public User CreateUserByUserName(string user)
         {
-            string apiUrl = "https://localhost:44396/api/users/" + user;
+            string apiUrl = "http://localhost:64934/api/users/" + user;
 
             using (HttpClient client = new HttpClient())
             {
