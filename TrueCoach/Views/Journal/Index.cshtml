@@ -4,6 +4,12 @@
     ViewData["Title"] = "Index";
     Layout = "_Layout";
 }
+
+
+<head>
+    <link href="~/css/CreateJournal.css" rel="stylesheet" />
+</head>
+
 <h4>You have @Model.Count() saved workout in the system.</h4>
 
 
@@ -15,29 +21,29 @@
    <a asp-action="Create">Create Journal</a>
 </p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Entry)
-            </th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Entry)
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entry)
+                </th>
 
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Entry)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
