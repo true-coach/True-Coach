@@ -18,6 +18,10 @@ namespace TrueCoach
 {
     public class Startup
     {
+        /// <summary>
+        ///  add services to the container
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,6 +30,10 @@ namespace TrueCoach
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        ///  configure and register service
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
        
@@ -49,7 +57,13 @@ namespace TrueCoach
             services.AddTransient<IRegeneration, RegenerationManagementService>();
         }
 
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// create the app's request processing pipeline
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

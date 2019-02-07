@@ -71,8 +71,6 @@ namespace TrueCoach.Controllers
             return View();
         }
 
-        
-
         //[ValidateAntiForgeryToken]
         //Post:Journal
         [HttpPost]

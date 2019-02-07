@@ -12,6 +12,10 @@ namespace TrueCoach.Models.Services
     {
         private TrueCoachJournalDbContext _context { get; }
 
+        /// <summary>
+        /// Connect with DB context
+        /// </summary>
+        /// <param name="context"></param>
         public RegenerationManagementService(TrueCoachJournalDbContext context)
         {
             _context = context;
@@ -25,6 +29,11 @@ namespace TrueCoach.Models.Services
 
         }
 
+        /// <summary>
+        /// delete a single regeneration from the table
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task DeleteRegeneration(int id)
         {
              Regeneration regeneration = _context.Regeneration.FirstOrDefault(Regeneration => Regeneration.ID == id);
@@ -38,11 +47,20 @@ namespace TrueCoach.Models.Services
            
         }
 
+        /// <summary>
+        /// Get all the regeneration in a string
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<Regeneration>> GetRegenerations()
         {
             return await _context.Regeneration.ToListAsync();
         }
 
+        /// <summary>
+        /// Update the regeneration information
+        /// </summary>
+        /// <param name="Regeneration"></param>
+        /// <returns></returns>
         public async Task UpdateRegeneration(Regeneration Regeneration)
         {
             _context.Regeneration.Update(Regeneration);

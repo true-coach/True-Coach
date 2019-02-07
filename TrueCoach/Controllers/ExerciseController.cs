@@ -12,6 +12,11 @@ namespace TrueCoach.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// control the flow of the application
+        /// </summary>
+        /// <param name="WorkoutID"></param>
+        /// <returns></returns>
         public List<Exercise> GetExercisePlan(int WorkoutID)
         {
             string apiUrl = "https://localhost:44396/api/Exercise/" + WorkoutID;
