@@ -16,11 +16,6 @@
 
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\Assets\" />
-  </ItemGroup>
-
-
-  <ItemGroup>
     <None Include="wwwroot\css\Assets\Personal-Training2.jpg" />
     <None Include="wwwroot\css\Assets\Personal_Trainer1.jpg" />
   </ItemGroup>
