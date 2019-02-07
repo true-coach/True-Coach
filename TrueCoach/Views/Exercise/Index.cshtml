@@ -1,25 +1,19 @@
-﻿@model List<Exercise>
+﻿@model TrueCoach.Models.Workout
+
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Home Page";
     Layout = "_Layout";
-    var workoutId = this.ViewContext.RouteData.Values["id"];
 }
 
-<h1>Workout Details</h1>
 
-@if (Model != null && Model.Any())
+
+
+@using (Html.BeginForm("ViewWorkout", "Workout", FormMethod.Post))
 {
-    <h2>Here are your workout details!</h2>
-    foreach (var item in Model)
-    {
-        <h2>@item.Name</h2>
-        <p>@item.Description</p>
+    <h2>Select Your Main Movement Focus:</h2>
+    <p>
+        <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
+        <input type="submit" value="Enter" />
+    </p>
 
-
-    }
-}
-else
-{
-    <h2>Let's view your workout details!</h2>
-    <p>put a button here that let's you view your details?</p>
 }
