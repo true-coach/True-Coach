@@ -1,0 +1,25 @@
+﻿@model List<Meal>
+@{
+    ViewData["Title"] = "Nutrition Details";
+    Layout = "_Layout";
+    var workoutId = this.ViewContext.RouteData.Values["id"];
+}
+
+<h1>Nutrition Details</h1>
+
+@if (Model != null && Model.Any())
+{
+    <h2>Here are your workout details!</h2>
+    foreach (var item in Model)
+    {
+        <h2>@item.Name</h2>
+        <p>@item.Description</p>
+
+
+    }
+}
+else
+{
+    <h2>Let's view your Meal plan details!</h2>
+   
+}

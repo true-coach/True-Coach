@@ -19,8 +19,8 @@ namespace TrueCoach.Controllers
 
         public User GetUserByUserName(string user)
         {
-           string apiUrl = "https://localhost:44396/api/users/" + user;
-            //string apiUrl = "https://truecoachapi.azurewebsites.net/api/users/" + user;
+          // string apiUrl = "https://localhost:44396/api/users/" + user;
+            string apiUrl = "https://truecoachapi.azurewebsites.net/api/users/" + user;
            
 
             using (HttpClient client = new HttpClient())
@@ -63,8 +63,8 @@ namespace TrueCoach.Controllers
 
         public User CreateUserByUserName(string user)
         {
-            string apiUrl = "http://localhost:64934/api/users/" + user;
-            //string apiUrl = "https://truecoachapi.azurewebsites.net/api/users/" + user;
+            //string apiUrl = "http://localhost:44396/api/users/" + user;
+            string apiUrl = "https://truecoachapi.azurewebsites.net/api/users/" + user;
 
             using (HttpClient client = new HttpClient())
             {
@@ -72,7 +72,8 @@ namespace TrueCoach.Controllers
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = client.PostAsync(apiUrl, null).Result;
+                //doesnt get passed this point
+                HttpResponseMessage response = client.PostAsync(apiUrl,null).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var data = response.Content.ReadAsStringAsync().Result;
@@ -90,7 +91,7 @@ namespace TrueCoach.Controllers
             var user = CreateUserByUserName(UserName);
             this.ControllerContext.HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
             HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
-           //TempData["TrueCoachUserID"] = user.UserName;
+           TempData["TrueCoachUserID"] = user.UserName;
             return RedirectToAction("Index", "Home");
         }
         public IActionResult Register()

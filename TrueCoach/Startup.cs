@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TrueCoach.Data;
-using TrueCoach.Models.Interfaces;
-using TrueCoach.Models.Services;
 
 namespace TrueCoach
 {
@@ -35,15 +26,16 @@ namespace TrueCoach
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<TrueCoachJournalDbContext>(options =>
 
-           options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+           // services.AddDbContext<TrueCoachJournalDbContext>(options =>
+
+           //options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
             services.AddDistributedMemoryCache();
             
             services.AddSession();
-            services.AddTransient<IJournal, JournalServiceManagment>();
+           // services.AddTransient<IJournal, JournalServiceManagment>();
 
          
         }

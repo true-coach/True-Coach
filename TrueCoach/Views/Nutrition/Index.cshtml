@@ -1,7 +1,16 @@
-﻿
+﻿@model TrueCoach.Models.Nutrition
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Nutrition Page";
+    Layout = "_Layout";
 }
 
-<h1>Index</h1>
+@using (Html.BeginForm("ViewMealPlan", "Nutrition", FormMethod.Post))
+{
+    <h2>Select Your Main Nutrition Focus:</h2>
+    <p>
+        <select asp-for="NutritionGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.FoodGoal>()"></select>
+        <input type="submit" value="Enter" />
+    </p>
 
+}
