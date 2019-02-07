@@ -15,7 +15,7 @@ namespace TrueCoach.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
+                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -34,6 +34,21 @@ namespace TrueCoach.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Journal");
+                });
+
+            modelBuilder.Entity("TrueCoach.Models.Regeneration", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("RegenerationID");
+
+                    b.Property<string>("RegenerationSteps");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Regeneration");
                 });
 #pragma warning restore 612, 618
         }

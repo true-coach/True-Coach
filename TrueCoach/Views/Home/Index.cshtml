@@ -1,13 +1,15 @@
-﻿@model TrueCoach.Models.Workout
-@using TrueCoach.Models
+﻿
 
 @{
-    ViewData["Title"] = "Home Page";
-    Layout = "_Layout";
+    ViewData["Title"] = "Index";
 }
+
 <head>
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
+
+
+<h1>Welcome to your profile page lets gooo!!!</h1>
 
 
 @*<div class="text-center">
@@ -26,11 +28,35 @@
 
     </div>*@
 
-@using (Html.BeginForm("ViewWorkout", "Workout", FormMethod.Post))
-{
-<p>
-    <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
-    <input type="submit" value="Enter" />
-</p>
-}
+@*@using (Html.BeginForm("ViewWorkout", "Workout", FormMethod.Post))
+    {
+        <h2>Select Your Main Movement Focus:</h2>
+        <p>
+            <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
+            <input type="submit" value="Enter" />
+        </p>
+    }*@
+
+<fieldset>
+    <legend>Profile Picture</legend>
+    <div class="editor-label">
+        <label for="profile">FileName:</label>
+    </div>
+    <div class="editor-field">
+        <input name="Profile" id="profile" type="file" />
+    </div>
+    <p>
+        <input type="submit" value="Upload" />
+    </p>
+</fieldset>
+<img alt="place-holder-photo" src="~/css/Assets/Portrait_Placeholder.png" width="150" height="150">
+
+
+
+<li id="workout-link"> <a href="https://truecoachbigrig.azurewebsites.net/Exercise">Workput Plan</a></li>
+<li id="nutrition-link"> <a href="#">Nutrition Plan</a></li>
+
+
+
+<img alt="kettle-bell" src="~/css/Assets/kettlebell.png" width="200" height="200">
 

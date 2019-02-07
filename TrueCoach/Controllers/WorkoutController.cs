@@ -16,8 +16,8 @@ namespace TrueCoach.Controllers
 
         public List<Workout> GetWorkoutsByGoal(int goal)
         {
-            string apiUrl = "http://localhost:64934/api/Workouts/" + (int)goal;
-
+           string apiUrl = "https://localhost:44396/api/Workouts/" + (int)goal;
+           //string apiUrl = "https://truecoachapi.azurewebsites.net/api/Workouts/";
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(apiUrl);
@@ -59,5 +59,10 @@ namespace TrueCoach.Controllers
             }
             return null;
         }
-    }
+
+        public IActionResult Details(int workoutid)
+        {
+            return RedirectToAction("ExerciseListView", "Exercise", workoutid);
+        }
+    }  
 }
