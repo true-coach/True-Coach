@@ -153,6 +153,7 @@ namespace TrueCoach.Controllers
             await _context.DeleteJournal(id);
             return RedirectToAction(nameof(Index));
         }
+
         private bool JournalExists(int id)
         {
             var journal = _context.GetJournal((int)id);

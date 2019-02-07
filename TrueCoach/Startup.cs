@@ -43,9 +43,10 @@ namespace TrueCoach
             services.AddDistributedMemoryCache();
             
             services.AddSession();
+            
             services.AddTransient<IJournal, JournalServiceManagment>();
-
-         
+            //services.AddTransient<IRegistration, RegistratoinServiceManagement>();
+            services.AddTransient<IRegeneration, RegenerationManagementService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
