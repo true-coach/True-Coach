@@ -38,7 +38,7 @@ namespace TrueCoach
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<TrueCoachJournalDbContext>(options =>
 
-           options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+           options.UseSqlServer(Configuration["ConnectionStrings:ProductionConnection"]));
 
             services.AddDistributedMemoryCache();
             

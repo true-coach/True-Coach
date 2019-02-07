@@ -19,8 +19,9 @@ namespace TrueCoach.Controllers
 
         public User GetUserByUserName(string user)
         {
-           string apiUrl = "https://localhost:44396/api/users/" + user;
-            //string apiUrl = "https://truecoachapi.azurewebsites.net/users/" + user;
+           //string apiUrl = "https://localhost:44396/api/users/" + user;
+            string apiUrl = "https://truecoachapi.azurewebsites.net/api/users/" + user;
+           
 
             using (HttpClient client = new HttpClient())
             {
@@ -62,7 +63,8 @@ namespace TrueCoach.Controllers
 
         public User CreateUserByUserName(string user)
         {
-            string apiUrl = "http://localhost:64934/api/users/" + user;
+            // string apiUrl = "http://localhost:64934/api/users/" + user;
+            string apiUrl = "https://truecoachapi.azurewebsites.net/api/users/" + user;
 
             using (HttpClient client = new HttpClient())
             {

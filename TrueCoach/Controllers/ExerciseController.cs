@@ -14,8 +14,8 @@ namespace TrueCoach.Controllers
         }
         public List<Exercise> GetExercisePlan(int WorkoutID)
         {
-            string apiUrl = "https://localhost:44396/api/Exercise/" + WorkoutID;
-            //string apiUrl = "https://truecoachapi.azurewebsites.net/";
+            //string apiUrl = "https://localhost:44396/api/Exercise/" ;
+            string apiUrl = "https://truecoachapi.azurewebsites.net/api/Exercise/"+ WorkoutID;
 
 
             using (HttpClient client = new HttpClient())
