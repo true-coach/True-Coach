@@ -1,0 +1,59 @@
+﻿@model IEnumerable<TrueCoach.Models.Regeneration>
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_Layout";
+}
+
+
+<form asp-controller="Regeneration" asp-action="Index"></form>
+
+<h4>"Recovery is just as important as your Workouts!"</h4>
+<p>Recovery is needed to reestablish intramuscular blood flow for oxygen delivery, which promotes replenishment of phosphocreatine stores </p>
+
+<h4>Methods of Recovery:</h4>
+<ol>
+    <li>Water: Hydration plays a key role in rocovery and could be the missing link in unlocking optimal performance. </li>
+    <li>Breathing: Deep breathing induces a calming effect on the body, decreasing everything from blood pressure to stress to nervous system activity.</li>
+    <li>Walking: Vigorous exercise is a form of stress. Walking, particularly outdoors is a way to reduce stress by gearing down.</li>
+    <li>Stretch: To speed up recovery, active stretching, like yoga, is a time-efficient and effective method and results in decreasing muscle soreness, increasing flexibility, increasing local blood flow, and decreasing neural excitability.</li>
+</ol>
+
+<p>Build your plan for Stress Regeneration: </p>
+<p>How much did you drink?</p>
+<p>
+    <a asp-action="Create">Add To Your Personal Regeneration </a>
+</p>
+
+<p>Did you take time to breathe, what did you do?</p>
+<p>
+    <a asp-action="Create">Add To Your Personal Regeneration</a>
+</p>
+<p>Did you stertch today or do some yoga?</p>
+<p>
+    <a asp-action="Create">Add To Your Personal Regeneration </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.)*@
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegenerationSteps)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
