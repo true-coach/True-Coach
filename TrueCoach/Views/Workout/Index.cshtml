@@ -3,12 +3,13 @@
     ViewData["Title"] = "Display Workouts";
 }
 
-<p>
+<div>
     @foreach (var item in Model)
     {
         <ul>
             <li>
                 @Html.DisplayFor(modelItem => item.WorkoutType.Name)
+              
             </li>
 
             <li>
@@ -16,7 +17,9 @@
             </li>
         </ul>
     }
-</p>
+</div>
+
+
     @*<div class="workoutResults">
         @if (Model != null && Model.Any())
         {

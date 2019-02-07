@@ -1,33 +1,8 @@
-﻿@model TrueCoach.Models.Workout
+﻿
 
 @{
-    ViewData["Title"] = "Home Page";
-    Layout = "_Layout";
+    ViewData["Title"] = "Index";
 }
 
+<h1>Welcome to your profile page lets gooo!!!</h1>
 
-
-@*<div class="text-center">
-        <h1 class="display-4">Welcome @Model. </h1>
-        <div class="form-group">
-            <form asp-action="ViewWorkout">
-                <label asp-for="WorkoutGoals" class="control-label"></label>
-                <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
-                <span asp-validation-for="WorkoutGoals" class="text-danger"></span>
-                <div class="form-group">
-                    <input type="submit" value="ViewWorkout" class="btn btn-primary" />
-                </div>
-            </form>
-        </div>
-
-
-    </div>*@
-
-@using (Html.BeginForm("ViewWorkout", "Workout", FormMethod.Post))
-{
-    <h2>Select Your Main Movement Focus:</h2>
-    <p>
-        <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
-        <input type="submit" value="Enter" />
-    </p>
-}
