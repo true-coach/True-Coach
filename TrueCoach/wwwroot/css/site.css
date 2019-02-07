@@ -12,6 +12,22 @@ for details on configuring this project to bundle and minify static web assets. 
 
 /* Sticky footer styles
 -------------------------------------------------- */
+body {
+    height: 100%;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;
+    background-size: cover;
+}
+
+.shade {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient( 150deg, rgba(0, 0, 0, 0.65), transparent);
+}
+
 html {
 
   font-size: 14px;
@@ -21,6 +37,8 @@ html {
     font-size: 16px;
   }
 }
+
+/*---------------------------user login-----------------*/
 #userLogin {
     text-align: center;
     margin-bottom: 2vw;
@@ -53,6 +71,8 @@ html {
     /*font-family: 'Emblema One', cursive;*/
 }
 
+/*----------------------user register-----------------*/
+
 #register {
     text-align: center;
     font-size: 1.5vw;
@@ -79,11 +99,15 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    /*background-image: url(Assets/Personal-Training2.jpg);*/
+    height: 100%;
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;*/
+    background-image: url(Assets/index.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+    /*background-image: linear-gradient( 175deg, transparent, transparent 40px, rgba(120, 120, 120, 0.1) 100px, rgba(120, 120, 120, 0.1) 110px, transparent 220px, transparent), linear-gradient( 200deg, transparent 80%, rgba(50, 50, 50, 0.3)), radial-gradient( ellipse at right bottom, transparent, transparent 200px, rgba(80, 80, 80, 0.1) 260px, rgba(80, 80, 80, 0.1) 320px, transparent 400px, transparent);*/
 }
+
+/*---------------carousel links--------------------------------*/
 #carouselExampleSlidesOnly {
     position: relative;
     left: 18.5vw;
@@ -95,6 +119,15 @@ body {
     border-radius: 2vw;
 }
 
+/*-----------------avatar links----------------------------------*/
+#workout-link{
+    padding-top: 1vw;
+}
+#nutrition-link {
+    padding-top: 1vw;
+}
+
+/*---------------------footer links---------------------------------*/
 footer {
     background-color: white;
 }
@@ -106,5 +139,13 @@ footer {
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
 }
 

@@ -14,7 +14,8 @@ namespace TrueCoach.Data
 
         }
                  
-       public DbSet<Journal> Journal { get; set; }
+        public DbSet<Journal> Journal { get; set; }
+        public DbSet<Regeneration> Regeneration { get; set; }
     }
     
     

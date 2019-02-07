@@ -4,17 +4,36 @@
     Layout = "_Layout";
 
 }
+
 <div class="jumbotron">
    <h1 id="userLogin">User Login</h1>
-   
-   
-   @using (Html.BeginForm("Login", "User", FormMethod.Post))
-   {
-       <p id="login">
-           Title: @Html.TextBox("UserName") <br />
-           <input class="submitbtn" type="submit" value="Login" />
-           @ViewBag.Status
-       </p>
-   }
         
 </div>
+
+<body>
+
+    @*<video autoplay muted loop id="myVideo">
+            <source src="~/css/Assets/Kettlebell Swing.mp4" type="video/mp4">
+        </video>*@
+  
+    <div style="position: fixed; top: -22vw; left:0vw; width: 50%; height: 100%; z-index: -1;">
+        <video autoplay muted loop id="video" style="width:200%; height:222%">
+            <source src="~/css/Assets/Kettlebell Swing.mp4" type="video/mp4">
+        </video>
+        </div>
+        <div class="jumbotron">
+            <h1 id="userLogin">User Login</h1>
+
+
+            @using (Html.BeginForm("Login", "User", FormMethod.Post))
+            {
+                <p id="login">
+                    Title: @Html.TextBox("UserName") <br />
+                    <input class="submitbtn" type="submit" value="Login" />
+                    @ViewBag.Status
+                </p>
+            }
+
+        </div>
+</body>
+

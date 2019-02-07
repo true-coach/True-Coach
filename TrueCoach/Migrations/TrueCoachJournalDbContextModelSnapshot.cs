@@ -35,6 +35,21 @@ namespace TrueCoach.Migrations
 
                     b.ToTable("Journal");
                 });
+
+            modelBuilder.Entity("TrueCoach.Models.Regeneration", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("RegenerationID");
+
+                    b.Property<string>("RegenerationSteps");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Regeneration");
+                });
 #pragma warning restore 612, 618
         }
     }

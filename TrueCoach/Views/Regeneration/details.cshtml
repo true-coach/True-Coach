@@ -1,0 +1,18 @@
+﻿@model TrueCoach.Models.Regeneration
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_Layout";
+}
+<h3>My Journal: </h3>
+<div>
+    <dl>
+        
+        @Html.DisplayFor(model => model.RegenerationSteps)
+
+    </dl>
+
+
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
