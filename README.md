@@ -19,7 +19,31 @@ Once a workout plan is selected, a list of suggested potential exercises will be
 After the desired goal has been established, the user will then be directed to the appropriate nutrition plan with suggested foods to achieve the desired goal.
 
 
-## Testing
+## Installation/Usage
+1. Clone the repository, open the TrueCoach solution in Visual Studio.
+2. Open the TrueCoach.sln solution located in the Async-Inn folder.
+3. Run IISExpress to host the webpages locally. The Web Browser should automatically open and redirect you to the Landing Page.
+4. Create associated SQL database.
+5. Use the API endpoints to conduct operations.
+6. Deploy to online web host if desired.
+
+
+## Tesing
+
+The following tests were done:
+
+1. Getters/Setters on all Models
+
+2. Standard CRUD operations on all tables
+
+## Requirements
+1.Visual Studios 2017 or equivalent C# IDE
+2 Entity Framework CORE
+3. Microsoft SQL Database.
+4. NET Core 2.1 SDK
+5. POSTMAN for CRUD operations
+6. Azure or other online PAAS for hosting.
+7. Instructions
 
 ##Authors
 -Regan Dufort
