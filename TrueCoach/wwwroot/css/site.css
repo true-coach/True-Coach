@@ -59,7 +59,7 @@ html {
 .jumbotron {
     position: relative;
     left: 11.5vw;
-    top: 10vw;
+    top: 5vw;
     opacity: .9;
     background-color: #b4b1b1;
     border: .3vw solid #fcf606;
@@ -87,6 +87,7 @@ html {
 .submitbtn {
     margin-top: 1vw;
     font-family: 'Baloo Paaji', cursive;
+    font-size: 1.5vw;
 }
 
 
@@ -129,6 +130,19 @@ body {
 
 #nutrition-link {
     padding-top: 1vw;
+}
+
+/*-----------------excersise page----------------------------------*/
+
+#workout-select {
+    width: 20vw;
+    text-align: center;
+    position: relative;
+    left: 13vw;
+}
+#focus {
+    text-align: center;
+    font-family: 'Baloo Paaji', cursive;
 }
 
 /*---------------------footer links---------------------------------*/
