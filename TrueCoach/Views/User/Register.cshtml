@@ -4,6 +4,7 @@
     Layout = "_Layout";
    ;
 }
+<img id="kettleBell2" alt="kettle-bell" src="~/css/Assets/kettlebell.png">
 <div class="jumbotron">
     <h1 id="userRegister">Register</h1>
 
@@ -11,7 +12,7 @@
     @using (Html.BeginForm("CreateUser", "User", FormMethod.Post))
     {
         <p id="register">
-            Title: @Html.TextBox("UserName") <br />
+            Name: @Html.TextBox("UserName") <br />
             <input class="submitbtn" type="submit" value="Submit" />
             @ViewBag.Status
         </p>

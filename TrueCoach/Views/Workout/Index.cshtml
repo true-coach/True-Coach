@@ -2,47 +2,52 @@
 @{
     ViewData["Title"] = "Display Workouts";
 }
+<img id="kettleBell" alt="kettle-bell" src="~/css/Assets/kettlebell.png">
+
+<iframe id="squat" src="https://giphy.com/embed/2vlLAjOPXD3TccrMyp" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe id="push-up" src="https://giphy.com/embed/5wGf2jFi07onw6lVDE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 <div class="jumbotron">
     <div>
         @foreach (var item in Model)
+
         {
-            <ul>
+            <ul id="workout-group">
                 <li>
                     @Html.DisplayFor(modelItem => item.WorkoutType.Name)
 
                 </li>
 
                 <li>
-                    <a asp-action="Details" asp-route-workoutid="@item.ID">Details</a>
+                    <a asp-action="Details" asp-route-workoutid="@item.ID">Excercise Details</a>
                 </li>
             </ul>
         }
     </div>
 
-   
+
 
 
 </div>
 
 
-    @*<div class="workoutResults">
-            @if (Model != null && Model.Any())
-            {
-                <ul>>List of Workouts for:</ul>
-                <h1>Here are your Workouts!!</h1>
-                <ul>
-                    @foreach (var item in Model)
-                    {
-                        <li>@item.WorkoutType.ID - @item.WorkoutType.Name</li>
+@*<div class="workoutResults">
+        @if (Model != null && Model.Any())
+        {
+            <ul>>List of Workouts for:</ul>
+            <h1>Here are your Workouts!!</h1>
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>@item.WorkoutType.ID - @item.WorkoutType.Name</li>
 
 
 
 
-                    }
-                </ul>
-            }
-            else
-            {
-                <h2>No workouts in list.</h2>
-            }
-        </div>*@
+                }
+            </ul>
+        }
+        else
+        {
+            <h2>No workouts in list.</h2>
+        }
+    </div>*@

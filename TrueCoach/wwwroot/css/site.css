@@ -43,10 +43,17 @@ html {
   }
 }
 
+
+/*---------------------------nav bar-----------------*/
+#logo {
+    height: 4vw;
+    width: 4vw;
+}
+
 /*---------------------------user login-----------------*/
 #userLogin {
     text-align: center;
-    margin-bottom: -1vw;
+    margin-bottom: 0.5vw;
     font-family: 'Baloo Paaji', cursive;
     font-size: 3vw;
 }
@@ -58,18 +65,19 @@ html {
 
 .jumbotron {
     position: relative;
-    left: 11.5vw;
-    top: 5vw;
     opacity: .9;
     background-color: #b4b1b1;
     border: .3vw solid #fcf606;
     border-radius: 1vw 1vw;
     width: 42vw;
     box-shadow: 1vw 1vw #474545;
+    margin-left: 15vw;
+    margin-top: 11vw;
 }
 #userRegister {
     text-align: center;
-    margin-bottom: 2vw;
+    margin-bottom: 0vw;
+    font-size: 3vw;
     /*font-family: 'Lalezar', cursive;*/
     font-family: 'Baloo Paaji', cursive;
     /*font-family: 'Black Han Sans', sans-serif;*/
@@ -138,11 +146,12 @@ body {
     width: 20vw;
     text-align: center;
     position: relative;
-    left: 13vw;
+    left: 9vw;
 }
 #focus {
     text-align: center;
     font-family: 'Baloo Paaji', cursive;
+    font-size:2vw;
 }
 
 /*---------------------footer links---------------------------------*/
@@ -160,11 +169,17 @@ footer {
 }
 
 #myVideo {
-    min-width: 100%;
+    /*min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
+    z-index: -100;*/
+    position: fixed;
+    top: -5vw;
+    left: -1vw;
+    width: 104vw;
+    height: 59vw;
+    z-index: -1;
 }
 
 /*---------------------legend---------------------------------*/
@@ -214,9 +229,8 @@ display: block;
     white-space: normal;
     position: relative;
     top: -4vw;
-    left: -4vw;
-    margin-left: 10vw;
-    margin-right: 1vw;
+    left: 4vw;
+   
 }
 
 
@@ -232,10 +246,9 @@ display: block;
     color: inherit;
     white-space: normal;
     position: relative;
-    top: 5vw;
-    left: 4vw;
-    margin-left: 13vw;
-    margin-right: 2vw;
+    top: 2vw;
+    left: 12vw;
+    
 }
 
 
@@ -269,11 +282,18 @@ display: block;
 
 #kettleBelt {
     display: block;
-    margin-left: 15vw;
+    position: relative;
+    top: -10.5vw;
+    left: 22vw;
+    height: 11vw;
+    width: 11vw;
+}
+
+
+#profile-input {
     position: relative;
     top: -3vw;
-    height: 7vw;
-    width: 7vw;
+    left: 5.5vw;
 }
 
 #workout-link1 {
@@ -285,43 +305,95 @@ display: block;
     font-size: 2vw;
     font-weight: bold;
     text-decoration: underline;
-    margin-right: 5vw;
+    position: absolute;
+    top: -4.5vw;
+    left: 1vw;
 }
 
 #profilelink2 {
     font-size: 2vw;
     font-weight: bold;
     text-decoration: underline;
-  }
+    position: absolute;
+    top: -1vw;
+    left: 1vw;
+}
 
 #linkstogether {
     text-align: center;
     position: relative;
-    top: -3vw;
+    top: -2vw;
 }
 
 
 #profilepage {
     height: 37vw;
     position: absolute;
-    top: 8vw;
-    left: 28vw;
+    top: -4vw;
+    left: 14vw;
 }
 
 #profilepicture1 {
     height: 10vw;
     width: 10vw;
     position: relative;
+    top: -10vw;
+    left: -3vw;
 }
 
 #profilepicture2 {
     font-size: 1.2vw;
+    position: absolute;
+    top: 2.5vw;
+    left: -3vw;
 }
 
 #profilepicture3 {
     font-size: 1.2vw;
+    position: absolute;
+    top: 5.5vw;
+    left: -3vw;
 }
 
-#kettlebelt2 {
-    position: relative
+#kettleBell {
+    display: block;
+    position: absolute;
+    top: 5vw;
+    left: 45vw;
+    height: 10vw;
+    width: 10vw;
+}
+#kettleBell2 {
+    display: block;
+    position: absolute;
+    top: 5.5vw;
+    left: 45vw;
+    height: 10vw;
+    width: 10vw;
+}
+
+#workout-group {
+    text-align: center;
+    font-family: 'Baloo Paaji', cursive;
+    font-size: 3vw;
+    list-style-type: none;
+    position: relative;
+    top: -1vw;
+    left: -1vw;
+    padding-top: 1vw;
+}
+
+#squat {
+    position: absolute;
+    top: 32vw;
+    left: 1vw;
+    width: 27vw;
+    height: 19vw;
+}
+#push-up {
+    position: absolute;
+    top: 32vw;
+    left: 72vw;
+    width: 27vw;
+    height: 19vw;
 }
