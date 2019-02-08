@@ -2,42 +2,47 @@
 @{
     ViewData["Title"] = "Display Workouts";
 }
+<div class="jumbotron">
+    <div>
+        @foreach (var item in Model)
+        {
+            <ul>
+                <li>
+                    @Html.DisplayFor(modelItem => item.WorkoutType.Name)
 
-<div>
-    @foreach (var item in Model)
-    {
-        <ul>
-            <li>
-                @Html.DisplayFor(modelItem => item.WorkoutType.Name)
-              
-            </li>
+                </li>
 
-            <li>
-                <a asp-action="Details" asp-route-workoutid="@item.ID">Details</a> 
-            </li>
-        </ul>
-    }
+                <li>
+                    <a asp-action="Details" asp-route-workoutid="@item.ID">Details</a>
+                </li>
+            </ul>
+        }
+    </div>
+
+   
+
+
 </div>
 
 
     @*<div class="workoutResults">
-        @if (Model != null && Model.Any())
-        {
-            <ul>>List of Workouts for:</ul>
-            <h1>Here are your Workouts!!</h1>
-            <ul>
-                @foreach (var item in Model)
-                {
-                    <li>@item.WorkoutType.ID - @item.WorkoutType.Name</li>
+            @if (Model != null && Model.Any())
+            {
+                <ul>>List of Workouts for:</ul>
+                <h1>Here are your Workouts!!</h1>
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li>@item.WorkoutType.ID - @item.WorkoutType.Name</li>
 
 
 
 
-                }
-            </ul>
-        }
-        else
-        {
-            <h2>No workouts in list.</h2>
-        }
-    </div>*@
+                    }
+                </ul>
+            }
+            else
+            {
+                <h2>No workouts in list.</h2>
+            }
+        </div>*@
