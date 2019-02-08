@@ -6,9 +6,9 @@
 
 <body>
          
-    <div style="position: fixed; top: -22vw; left:0vw; width: 50%; height: 100%; z-index: -1;">
-        <video autoplay muted loop id="video" style="width:200%; height:222%">
-            <source src="~/css/Assets/Kettlebell Swing.mp4" type="video/mp4">
+    <div id="myVideo">
+        <video  autoplay muted loop id="video" style="width:100%; height:100%">
+            <source src="~/css/Assets/FEARS - Motivational Workout Video HD(1).mp4" type="video/mp4">
         </video>
         </div>
         <div class="jumbotron">
@@ -17,7 +17,7 @@
             @using (Html.BeginForm("Login", "User", FormMethod.Post))
             {
                 <p id="login">
-                    Title: @Html.TextBox("UserName") <br />
+                    Name: @Html.TextBox("UserName") <br />
                     <input class="submitbtn" type="submit" value="Login" />
                     @ViewBag.Status
                 </p>

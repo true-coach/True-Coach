@@ -7,10 +7,18 @@
 
 @using (Html.BeginForm("ViewMealPlan", "Nutrition", FormMethod.Post))
 {
-    <h2>Select Your Main Nutrition Focus:</h2>
-    <p>
+
+    <img id="kettleBell2" alt="kettle-bell" src="~/css/Assets/kettlebell.png">
+    <div class="jumbotron">
+
+    <h2 id="focus">Select Your Main Nutrition Focus:</h2>
+    <p id="workout-select">
         <select asp-for="NutritionGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.FoodGoal>()"></select>
-        <input type="submit" value="Enter" />
+        <input class="submitbtn" type="submit" value="Select" />
     </p>
+
+        
+
+    </div>
 
 }
