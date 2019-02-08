@@ -8,10 +8,6 @@
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 
-
-<h1>Welcome to your profile page lets gooo!!!</h1>
-
-
 @*<div class="text-center">
         <h1 class="display-4">Welcome @Model. </h1>
         <div class="form-group">
@@ -37,26 +33,45 @@
         </p>
     }*@
 
+
+<div class="jumbotron" id="profilepage">
+    <h1 id="userLogin">Profile</h1>
+
+   <div id="profilelabel">
+        <div id="editorInfolabel1">
+            <label id="filename" for="profile">Name:</label>
+            <label id="filename" for="profile">Height:</label>
+            <label id="filename" for="profile">Weight:</label>
+        </div>
+
+        <div id="editorInfolabel2">
+            <img id="profilepicture1" alt="place-holder-photo" src="~/css/Assets/Portrait_Placeholder.png" >
+            <input id="profilepicture2" name="Profile" type="file" />
+            <input id="profilepicture3" type="submit" value="Upload" />
+        </div>
+
+    <div id="linkstogether">
+        <a id="profilelink1" href="https://truecoachbigrig.azurewebsites.net/Exercise">Workput Plan</a>
+        <a id="profilelink2" href="#">Nutrition Plan</a>
+    </div>
+
+    <div id="kettlebelt2">
+        <img id="kettleBelt" alt="kettle-bell" src="~/css/Assets/kettlebell.png">
+    </div>
+       
+   </div>
+
+</div>
+
 <fieldset>
-    <legend>Profile Picture</legend>
-    <div class="editor-label">
-        <label for="profile">FileName:</label>
-    </div>
-    <div class="editor-field">
-        <input name="Profile" id="profile" type="file" />
-    </div>
-    <p>
-        <input type="submit" value="Upload" />
-    </p>
+    
 </fieldset>
-<img alt="place-holder-photo" src="~/css/Assets/Portrait_Placeholder.png" width="150" height="150">
 
 
 
-<li id="workout-link"> <a href="https://truecoachbigrig.azurewebsites.net/Exercise">Workput Plan</a></li>
-<li id="nutrition-link"> <a href="#">Nutrition Plan</a></li>
 
 
 
-<img alt="kettle-bell" src="~/css/Assets/kettlebell.png" width="200" height="200">
+
+
 

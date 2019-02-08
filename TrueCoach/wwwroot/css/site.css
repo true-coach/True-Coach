@@ -41,8 +41,9 @@ html {
 /*---------------------------user login-----------------*/
 #userLogin {
     text-align: center;
-    margin-bottom: 2vw;
+    margin-bottom: -1vw;
     font-family: 'Baloo Paaji', cursive;
+    font-size: 3vw;
 }
 #login {
     text-align: center;
@@ -55,11 +56,11 @@ html {
     left: 11.5vw;
     top: 10vw;
     opacity: .9;
-    background-color: aqua;
-    border: .3vw solid rgb(245, 247, 227);
+    background-color: #b4b1b1;
+    border: .3vw solid #fcf606;
     border-radius: 1vw 1vw;
-    width: 50vw;
-    box-shadow: 1vw 1vw grey;
+    width: 42vw;
+    box-shadow: 1vw 1vw #474545;
 }
 #userRegister {
     text-align: center;
@@ -120,9 +121,7 @@ body {
 }
 
 /*-----------------avatar links----------------------------------*/
-#workout-link{
-    padding-top: 1vw;
-}
+
 #nutrition-link {
     padding-top: 1vw;
 }
@@ -149,3 +148,161 @@ footer {
     z-index: -100;
 }
 
+/*---------------------legend---------------------------------*/
+#profile{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+
+#editorlabel
+{
+display: block;
+    width: 100%;
+    max-width: 18%;
+    text-align: center;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+    position: relative;
+    top: -10vw;
+    left: -10vw;
+    margin-left: 30%;
+    margin-right: 50%;
+}
+
+
+#editorInfolabel2 {
+    display: block;
+    width: 100%;
+    max-width: 2vw;
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+    position: relative;
+    top: -4vw;
+    left: -4vw;
+    margin-left: 10vw;
+    margin-right: 1vw;
+}
+
+
+
+#editorInfolabel1 {
+    display: block;
+    width: 100%;
+    max-width: 4vw;
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+    position: relative;
+    top: 5vw;
+    left: 4vw;
+    margin-left: 13vw;
+    margin-right: 2vw;
+}
+
+
+
+#filename {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5vw;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+
+#regen
+ {
+    position: relative;
+    left: 11.5vw;
+    top: 10vw;
+    opacity: .9;
+    background-color: #b4b1b1;
+    border: .3vw solid #fcf606;
+    border-radius: 1vw 1vw;
+    width: 50vw;
+    box-shadow: 1vw 1vw #474545;
+}
+
+#kettleBelt {
+    display: block;
+    margin-left: 15vw;
+    position: relative;
+    top: -3vw;
+    height: 7vw;
+    width: 7vw;
+}
+
+#workout-link1 {
+    padding-top: 1vw;
+    color: black;
+}
+
+#profilelink1 {
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 5vw;
+}
+
+#profilelink2 {
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+#linkstogether {
+    text-align: center;
+    position: relative;
+    top: -3vw;
+}
+
+
+#profilepage {
+    height: 37vw;
+    position: absolute;
+    top: 8vw;
+    left: 28vw;
+}
+
+#profilepicture1 {
+    height: 10vw;
+    width: 10vw;
+    position: relative;
+}
+
+#profilepicture2 {
+    font-size: 1.2vw;
+}
+
+#profilepicture3 {
+    font-size: 1.2vw;
+}
+
+#kettlebelt2 {
+    position: relative
+}
