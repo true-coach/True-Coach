@@ -16,8 +16,8 @@ namespace TrueCoach.Controllers
 
         public List<Workout> GetWorkoutsByGoal(int goal)
         {
-           //string apiUrl = "https://localhost:44396/api/Workouts/" ;
-           string apiUrl = "https://truecoachapi.azurewebsites.net/api/Workouts/"+ (int)goal;
+           //string apiUrl = "https://localhost:44396/api/Workouts/" + (int)goal;
+			string apiUrl = "https://truecoachapi.azurewebsites.net/api/Workouts/" + (int)goal;
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(apiUrl);
@@ -49,11 +49,7 @@ namespace TrueCoach.Controllers
             else
             {
                 ViewBag.Status = "Goals " + goal;
-                // this.HttpContext.Session.("TrueCoachUserID", (int)goal);
-
                 this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", goal);
-
-                //this.ControllerContext.HttpContext.Session.SetInt32("TrueCoachUserID", );
 
                 return View("Index", workoutList);
             }
@@ -62,7 +58,7 @@ namespace TrueCoach.Controllers
 
         public IActionResult Details(int workoutid)
         {
-            return RedirectToAction("ExerciseListView", "Exercise", workoutid);
+            return RedirectToAction("ExerciseListView", "Exercise", new { workoutId = workoutid });
         }
     }  
 }

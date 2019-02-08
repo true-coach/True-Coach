@@ -31,7 +31,7 @@ namespace TrueCoach
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-       
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -41,18 +41,14 @@ namespace TrueCoach
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<TrueCoachJournalDbContext>(options =>
-
-           options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
-
-            services.AddDistributedMemoryCache();
-            
-            services.AddSession();
-           services.AddTransient<IJournal, JournalServiceManagment>();
-            //services.AddTransient<IRegistration, RegistratoinServiceManagement>();
-            services.AddTransient<IRegeneration, RegenerationManagementService>();
+                options.UseSqlServer(Configuration["ConnectionStrings:ProductionConnection"]));
+                services.AddDistributedMemoryCache();
+                services.AddSession();
+                services.AddTransient<IJournal, JournalServiceManagment>();
+                services.AddTransient<IRegeneration, RegenerationManagementService>();
         }
 
-         
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         /// <summary>
         /// create the app's request processing pipeline

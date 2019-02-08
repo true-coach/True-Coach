@@ -28,7 +28,13 @@
 
                                 <input asp-for="Entry" class="form-control" />
 
-                                <span asp-validation-for="Entry" class="text-danger"></span>
+                                <label for="story">Tell us your story:</label>
+
+                                        <textarea id="story" name="story"
+                                                  rows="5" cols="33">
+                                        It was a dark and stormy night...
+                                        </textarea>
+                                <span asp-="Entry" class="text-danger"></span>
 
                             </div>
 

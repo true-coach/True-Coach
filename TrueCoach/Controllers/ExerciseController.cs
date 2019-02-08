@@ -41,9 +41,9 @@ namespace TrueCoach.Controllers
             return null;
         }
 
-        public IActionResult ExerciseListView(int workoutID)
+        public IActionResult ExerciseListView(int workoutId)
         {
-            var workoutList = GetExercisePlan(workoutID);
+            var workoutList = GetExercisePlan(workoutId);
 
             return View("Detail", workoutList);
         }
