@@ -27,7 +27,8 @@ namespace TrueCoach.Controllers
 
         public List<Meal> GetNutritionByGoal(int goal)
         {
-           // string apiUrl = "https://localhost:44396/api/Nutrition/" + goal;
+            //string apiUrl = "https://localhost:44396/api/Nutrition/" + goal;
+            
             string apiUrl = "https://truecoachapi.azurewebsites.net/api/Nutrition/" + goal;
             using (HttpClient client = new HttpClient())
             {

@@ -2,19 +2,19 @@
 @{
     ViewData["Title"] = "Display Workouts";
 }
+<div class="jumbotron">
+    <div>
+        @foreach (var item in Model)
+        {
+            <ul>
+                <li>
+                    @Html.DisplayFor(modelItem => item.WorkoutType.Name)
+                </li>
 
-<div>
-    @foreach (var item in Model)
-    {
-        <ul>
-            <li>
-                @Html.DisplayFor(modelItem => item.WorkoutType.Name)
-              
-            </li>
-
-            <li>
-                <a asp-action="Details" asp-route-workoutid="@item.ID">Details</a> 
-            </li>
-        </ul>
-    }
+                <li>
+                    <a asp-action="Details" asp-route-workoutid="@item.ID">Details</a>
+                </li>
+            </ul>
+        }
+    </div>
 </div>

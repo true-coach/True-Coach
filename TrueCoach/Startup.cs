@@ -41,15 +41,11 @@ namespace TrueCoach
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<TrueCoachJournalDbContext>(options =>
-
-            options.UseSqlServer(Configuration["ConnectionStrings:ProductionConnection"]));
-
-            services.AddDistributedMemoryCache();
-
-            services.AddSession();
-            services.AddTransient<IJournal, JournalServiceManagment>();
-            //services.AddTransient<IRegistration, RegistratoinServiceManagement>();
-            services.AddTransient<IRegeneration, RegenerationManagementService>();
+                options.UseSqlServer(Configuration["ConnectionStrings:ProductionConnection"]));
+                services.AddDistributedMemoryCache();
+                services.AddSession();
+                services.AddTransient<IJournal, JournalServiceManagment>();
+                services.AddTransient<IRegeneration, RegenerationManagementService>();
         }
 
 
