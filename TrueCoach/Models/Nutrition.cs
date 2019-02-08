@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TrueCoach.Models
 {
@@ -14,9 +15,13 @@ namespace TrueCoach.Models
 
     public enum FoodGoal
     {
+        [Display(Name = "Lose Body Fat")]
         LoseFat = 1,
+        [Display(Name = "Build Muscle")]
         BuildMuscle,
+        [Display(Name = "Maintainance")]
         Maintain
     }
 }
+
 

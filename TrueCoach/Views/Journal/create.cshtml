@@ -3,62 +3,33 @@
 @{
     ViewData["Title"] = "Create";
     Layout = "_Layout";
-
 }
+
 <head>
     <link href="~/css/CreateJournal.css" rel="stylesheet" />
 </head>
 
-@*<form asp-action="Create">*@
-    <div class="shade">
-        <div class="blackboard">
-            <div class="form">
-
-                <div class="row">
-
-                    <div class="col-md-4">
-
-                        <form asp-action="Create">
-
-                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                            <div class="form-group">
-
-                                <label asp-for="Entry" class="control-label"></label>
-
-                                <input asp-for="Entry" class="form-control" />
-
-                                <label for="story">Tell us your story:</label>
-
-                                        <textarea id="story" name="story"
-                                                  rows="5" cols="33">
-                                        It was a dark and stormy night...
-                                        </textarea>
-                                <span asp-="Entry" class="text-danger"></span>
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <input type="submit" value="Create" class="btn btn-primary" />
-
-                            </div>
-
-                        </form>
-
-                    </div>
-
-                </div>
-
-
-
-                <div>
-                    <a asp-action="Index">Back to List</a>
-                </div>
-
-            </div>
+<div class="shade">
+    <div class="blackboard">
+        <div class="form">
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Entry" class="control-label"></label>
+                            <textarea class="form-control" rows="8" id="comment"></textarea>/>
+                            <span asp-="Entry" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Add New Journal Entry" class="btn btn-primary" />
+                        </div>
+                    </form>
                 </div>
             </div>
-
-
-
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

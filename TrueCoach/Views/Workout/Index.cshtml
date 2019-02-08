@@ -8,9 +8,11 @@
 <iframe id="push-up" src="https://giphy.com/embed/5wGf2jFi07onw6lVDE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 <div class="jumbotron">
     <div>
+        <h2 class="text-center ">Choose Workout Type:</h2>
         @foreach (var item in Model)
 
         {
+
             <ul id="workout-group">
                 <li>
                     @Html.DisplayFor(modelItem => item.WorkoutType.Name)
@@ -20,6 +22,11 @@
                     <a asp-action="Details" asp-route-workoutid="@item.ID">Excercise Details</a>
                 </li>
             </ul>
+
+           @* <div class="text-center text-uppercase workout-types">
+                <a asp-action="Details" asp-route-workoutid="@item.ID">@item.WorkoutType.Name</a>
+            </div> *@
+
         }
     </div>
 
