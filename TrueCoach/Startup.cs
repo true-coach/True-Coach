@@ -2,8 +2,12 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TrueCoach.Data;
+using TrueCoach.Models.Interfaces;
+using TrueCoach.Models.Services;
 
 namespace TrueCoach
 {
@@ -27,7 +31,7 @@ namespace TrueCoach
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-       
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -36,19 +40,19 @@ namespace TrueCoach
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-           // services.AddDbContext<TrueCoachJournalDbContext>(options =>
+            services.AddDbContext<TrueCoachJournalDbContext>(options =>
 
-           //options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            options.UseSqlServer(Configuration["ConnectionStrings:ProductionConnection"]));
 
             services.AddDistributedMemoryCache();
-            
+
             services.AddSession();
-           // services.AddTransient<IJournal, JournalServiceManagment>();
+            services.AddTransient<IJournal, JournalServiceManagment>();
             //services.AddTransient<IRegistration, RegistratoinServiceManagement>();
             services.AddTransient<IRegeneration, RegenerationManagementService>();
         }
 
-         
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         /// <summary>
         /// create the app's request processing pipeline
