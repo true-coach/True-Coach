@@ -5,19 +5,21 @@
     var workoutId = this.ViewContext.RouteData.Values["id"];
 }
 
-<h1>Workout Details</h1>
+<div class="text-center">
+    <h1>Workout Details</h1>
 
-@if (Model != null && Model.Any())
-{
-    <h2>Here are your workout details!</h2>
-    foreach (var item in Model)
+    @if (Model != null && Model.Any())
     {
-        <h2>@item.Name</h2>
-        <p>@item.Description</p>
+        foreach (var item in Model)
+        {
+            <div class="py-3">
+                <h4>@item.Name</h4>
+                @Html.Raw(item.Description)
+            </div>
+        }
     }
-}
-else
-{
-    <h2>Let's view your workout details!</h2>
-    <p>put a button here that let's you view your details?</p>
-}
+    else
+    {
+        <h2>Let's view your workout details!</h2>
+    }
+</div>

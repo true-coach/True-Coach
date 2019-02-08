@@ -19,7 +19,6 @@ body {
     height: 100%;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;
     background-size: cover;
-
 }
 
 .shade {
@@ -34,13 +33,13 @@ body {
 
 
 html {
-
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 /*---------------------------user login-----------------*/
@@ -50,6 +49,7 @@ html {
     font-family: 'Baloo Paaji', cursive;
     font-size: 3vw;
 }
+
 #login {
     text-align: center;
     font-size: 1.5vw;
@@ -67,6 +67,7 @@ html {
     width: 42vw;
     box-shadow: 1vw 1vw #474545;
 }
+
 #userRegister {
     text-align: center;
     margin-bottom: 2vw;
@@ -84,6 +85,7 @@ html {
     font-size: 1.5vw;
     font-family: 'Baloo Paaji', cursive;
 }
+
 .submitbtn {
     margin-top: 1vw;
     font-family: 'Baloo Paaji', cursive;
@@ -99,8 +101,8 @@ html {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -140,6 +142,7 @@ body {
     position: relative;
     left: 13vw;
 }
+
 #focus {
     text-align: center;
     font-family: 'Baloo Paaji', cursive;
@@ -149,14 +152,15 @@ body {
 footer {
     background-color: white;
 }
+
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 #myVideo {
@@ -168,7 +172,7 @@ footer {
 }
 
 /*---------------------legend---------------------------------*/
-#profile{
+#profile {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -182,9 +186,8 @@ footer {
 }
 
 
-#editorlabel
-{
-display: block;
+#editorlabel {
+    display: block;
     width: 100%;
     max-width: 18%;
     text-align: center;
@@ -254,8 +257,7 @@ display: block;
 }
 
 
-#regen
- {
+#regen {
     position: relative;
     left: 11.5vw;
     top: 10vw;
@@ -292,7 +294,7 @@ display: block;
     font-size: 2vw;
     font-weight: bold;
     text-decoration: underline;
-  }
+}
 
 #linkstogether {
     text-align: center;
@@ -324,4 +326,23 @@ display: block;
 
 #kettlebelt2 {
     position: relative
+}
+
+p {
+    text-align: center;
+}
+
+.workout-types {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.workout-types a {
+    color: black;
+    text-decoration: none;
+}
+
+.workout-types a:hover {
+    color: #474545;
+    text-decoration: none;
 }
