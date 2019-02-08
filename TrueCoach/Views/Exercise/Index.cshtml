@@ -10,10 +10,14 @@
 
 @using (Html.BeginForm("ViewWorkout", "Workout", FormMethod.Post))
 {
-    <h2>Select Your Main Movement Focus:</h2>
-    <p>
-        <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
-        <input type="submit" value="Enter" />
-    </p>
+    <div class="jumbotron">
+        <h1 id="userLogin">User Login</h1>
 
+    <h2 id="focus">Select Your Main Movement Focus:</h2>
+    <p id="workout-select">
+        <select asp-for="WorkoutGoals" class="form-control" asp-items="@Html.GetEnumSelectList<TrueCoach.Models.Goals>()"></select>
+        <input class="submitbtn" type="submit" value="Select" />
+    </p>
+       
+    </div>
 }
