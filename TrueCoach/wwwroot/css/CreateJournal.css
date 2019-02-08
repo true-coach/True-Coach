@@ -108,3 +108,8 @@ input[type="submit"] {
     color: rgba(238, 238, 238, 0.3);
     text-shadow: none;
 }
+.formcontrol {
+    background-color: blue;
+    height: 500px;
+    width: 500px;
+}
