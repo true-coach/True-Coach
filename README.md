@@ -53,7 +53,7 @@ The following tests were done:
 * Joseph Pumphrey
 * Raymond Johnson
 
-## icensing 
+## Licensing 
 
 This project is licensed under the MIT License
 
@@ -62,23 +62,23 @@ This project is licensed under the MIT License
 Bootstrap website
 W3 Schools
 
-### Communication plan: How will your group communicate with each other? What is your strategy for ensuring everyone’s voices are heard, and that contributions from both loud and soft voices are listened to? Do you have a plan for managing psychological safety?
+### Communication plan: How will your group communicate with each other? What is your strategy for ensuring everyoneâ€™s voices are heard, and that contributions from both loud and soft voices are listened to? Do you have a plan for managing psychological safety?
 
 * Listen fully and ask each member of the team if diverse input have been solicited. Be open to feedbacks. Invite quite members to speak and contribute. Acknowledge all contributions in a discussion. Before responding paraphrase what you heard. Recognize all contributions, ideas and values. Build on the thoughts and ideas of others.
 
 ### Conflict plan: What will your group do when it encounters conflict? What will your process be to resolve it? Paper, Rock, Scissors. 
 
-* Use disagreements as a catalyst for learning. Intervene when someone is being discounted or ignored. If anyone forgot to share ideas during a meeting, send a follow-up email. Develop a team mechanism to address disagreements. Keep a calm demeanor and don’t speak loudly or interrupt. Eliminate distractions and relive time pressures when possible.
+* Use disagreements as a catalyst for learning. Intervene when someone is being discounted or ignored. If anyone forgot to share ideas during a meeting, send a follow-up email. Develop a team mechanism to address disagreements. Keep a calm demeanor and donâ€™t speak loudly or interrupt. Eliminate distractions and relive time pressures when possible.
 
-### Work plan: How you will identify tasks, assign tasks, know when they are complete, and manage work in general? In particular, make sure you know how you’ll track whether everyone is contributing equally to all parts of the application, and that each person is working on “meaty” problems. What project management tool will be used?
+### Work plan: How you will identify tasks, assign tasks, know when they are complete, and manage work in general? In particular, make sure you know how youâ€™ll track whether everyone is contributing equally to all parts of the application, and that each person is working on â€œmeatyâ€ problems. What project management tool will be used?
 
-* Due to time constraint, set goals that are attainable. Deploy a working application now, think about CI / CD for continuous improvements. Ensure everyone on the team understands how each person’s role is essential for the team. Align individual contributions and team goals
+* Due to time constraint, set goals that are attainable. Deploy a working application now, think about CI / CD for continuous improvements. Ensure everyone on the team understands how each personâ€™s role is essential for the team. Align individual contributions and team goals
 
-### Git process: What is your Git flow? How many people must review a PR? Who merges PRs? How often will you merge? How will you communicate that it’s time to merge?
+### Git process: What is your Git flow? How many people must review a PR? Who merges PRs? How often will you merge? How will you communicate that itâ€™s time to merge?
 
 * Two lead developers might be assigned to approve pull requests. The pull request must make improvements and not add to any confusion. The pull request must be agreed upon.
 
-### Anything else you feel is important: expectations around work times, stand-up times(outside of the ones schedule with the instructional team), taking breaks/seeking help when you’re stuck, etc.
+### Anything else you feel is important: expectations around work times, stand-up times(outside of the ones schedule with the instructional team), taking breaks/seeking help when youâ€™re stuck, etc.
 * This is a shared document and changes can be applied as needed. 
 
 
@@ -91,39 +91,3 @@ W3 Schools
 ![WireFrame](/Assets/WireFrame3.jpg)  
 ![WireFrame](/Assets/WireFrame4.jpg)  
 ![WireFrame](/Assets/WireFrame6.jpg)  
-=======
-
-The following tests were done:
-
-1. Getters/Setters on all Models
-
-2. Standard CRUD operations on all tables
-
-## Requirements
-1.Visual Studios 2017 or equivalent C# IDE
-2 Entity Framework CORE
-3. Microsoft SQL Database.
-4. NET Core 2.1 SDK
-5. POSTMAN for CRUD operations
-6. Azure or other online PAAS for hosting.
-7. Instructions
-
-## Authors
-* Regan Dufort
-* Dev Shrestha
-* Shalom Belaineh
-* Joseph Pumphrey
-* Raymond Johnson
-
-#Licensing 
-
-This project is licensed under the MIT License
-
-## Acknowledgments
-
-Bootstrap website
-W3 Schools
-
-## Schema
-![Schema](/Assets/Schema.jpg)  
->>>>>>> d063f4e2ab96ed92e0c96a2efd1c268230f92408
