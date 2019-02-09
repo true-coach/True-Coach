@@ -4,19 +4,19 @@ This app is designed for the everyday user that has a particular fitness goal in
 
 ## Software Requirements 
 Please read out software requirements
-![.......](.......)  
+![Software Requirements](/Requirements.md)  
 
 ## How the App Works
 
-A user will open the landing page. From there, the user will read about the website and through the reading the user will be directed to register to get started. 
+1. A user will open the landing page. From there, the user will read about the website and through the reading the user will be directed to register to get started. 
 
-Once the user is registered, the user can then proceed to the goal selection page. 
+2. Once the user is registered, the user can then proceed to the goal selection page. 
 
-On the goal selection page the user will select a workout plan from the drop down that suits their needs.
+3. On the goal selection page the user will select a workout plan from the drop down that suits their needs.
 
-Once a workout plan is selected, a list of suggested potential exercises will be provided for each movement/muscle group. 
+4. Once a workout plan is selected, a list of suggested potential exercises will be provided for each movement/muscle group. 
 
-After the desired goal has been established, the user will then be directed to the appropriate nutrition plan with suggested foods to achieve the desired goal.
+5. After the desired goal has been established, the user will then be directed to the appropriate nutrition plan with suggested foods to achieve the desired goal.
 
 
 ## Installation/Usage
@@ -29,6 +29,7 @@ After the desired goal has been established, the user will then be directed to t
 
 
 ## Tesing
+* Testing was conducted on each CRUD operation for each specific model. See XunitTesting folder.
 
 The following tests were done:
 
@@ -54,9 +55,12 @@ The following tests were done:
 
 #Licensing 
 
-MIT Licence (open license)
+This project is licensed under the MIT License
 
 ## Acknowledgments
 
 Bootstrap website
 W3 Schools
+
+## Schema
+![Schema](/Assets/TrueCoach_Content_DB Schema.png)  
