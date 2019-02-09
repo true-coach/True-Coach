@@ -27,7 +27,6 @@ Please read out software requirements
 5. Use the API endpoints to conduct operations.
 6. Deploy to online web host if desired.
 
-
 ## Tesing
 * Testing was conducted on each CRUD operation for each specific model. See XunitTesting folder.
 
@@ -63,4 +62,4 @@ Bootstrap website
 W3 Schools
 
 ## Schema
-![Schema](/Assets/TrueCoach_Content_DB Schema.png)
+![Schema](/Assets/Schema.jpg)  
