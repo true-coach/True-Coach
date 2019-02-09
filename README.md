@@ -4,7 +4,7 @@ This app is designed for the everyday user that has a particular fitness goal in
 
 ## Software Requirements 
 Please read out software requirements
-![Software Requirements](/Requirements.md)  
+* [Requirements](/Requirements.md)  
 
 ## How the App Works
 
@@ -28,7 +28,7 @@ Please read out software requirements
 6. Deploy to online web host if desired.
 
 
-## Tesing
+## Testing
 * Testing was conducted on each CRUD operation for each specific model. See XunitTesting folder.
 
 The following tests were done:
@@ -63,4 +63,4 @@ Bootstrap website
 W3 Schools
 
 ## Schema
-![Schema](/Assets/TrueCoach_Content_DB Schema.png)  
+![Schema](/Assets/Schema.jpg)  
