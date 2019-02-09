@@ -4,7 +4,7 @@ This app is designed for the everyday user that has a particular fitness goal in
 
 ## Software Requirements 
 Please read out software requirements
-![Software Requirements](/Requirements.md)  
+(/Requirements.md)  
 
 ## How the App Works
 
@@ -46,12 +46,12 @@ The following tests were done:
 6. Azure or other online PAAS for hosting.
 7. Instructions
 
-##Authors
--Regan Dufort
--Dev Shrestha
--Shalom Belaineh
--Joseph Pumphrey
--Raymond Johnson
+## Authors
+* Regan Dufort
+* Dev Shrestha
+* Shalom Belaineh
+* Joseph Pumphrey
+* Raymond Johnson
 
 #Licensing 
 
