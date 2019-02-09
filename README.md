@@ -1,4 +1,4 @@
-### True_Coach
+# True_Coach
 
 This app is designed for the everyday user that has a particular fitness goal in mind. This app will get a user on the right path to achieve their desired goal. The app will provide recommendations for exercises and nutrition to achieve the desired goal. 
 
@@ -27,8 +27,7 @@ Please read out software requirements
 5. Use the API endpoints to conduct operations.
 6. Deploy to online web host if desired.
 
-
-## Testing
+## Tesing
 * Testing was conducted on each CRUD operation for each specific model. See XunitTesting folder.
 
 The following tests were done:
@@ -46,12 +45,12 @@ The following tests were done:
 6. Azure or other online PAAS for hosting.
 7. Instructions
 
-##Authors
--Regan Dufort
--Dev Shrestha
--Shalom Belaineh
--Joseph Pumphrey
--Raymond Johnson
+## Authors
+* Regan Dufort
+* Dev Shrestha
+* Shalom Belaineh
+* Joseph Pumphrey
+* Raymond Johnson
 
 #Licensing 
 
