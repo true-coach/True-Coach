@@ -1,4 +1,4 @@
-### True_Coach
+# True_Coach
 
 This app is designed for the everyday user that has a particular fitness goal in mind. This app will get a user on the right path to achieve their desired goal. The app will provide recommendations for exercises and nutrition to achieve the desired goal. 
 
@@ -27,9 +27,9 @@ Please read out software requirements
 5. Use the API endpoints to conduct operations.
 6. Deploy to online web host if desired.
 
-
 ## Testing
 * Testing was conducted on each CRUD operation for each specific model. See XunitTesting folder.
+<<<<<<< HEAD
 
 The following tests were done:
 
@@ -91,3 +91,39 @@ W3 Schools
 ![WireFrame](/Assets/WireFrame3.jpg)  
 ![WireFrame](/Assets/WireFrame4.jpg)  
 ![WireFrame](/Assets/WireFrame6.jpg)  
+=======
+
+The following tests were done:
+
+1. Getters/Setters on all Models
+
+2. Standard CRUD operations on all tables
+
+## Requirements
+1.Visual Studios 2017 or equivalent C# IDE
+2 Entity Framework CORE
+3. Microsoft SQL Database.
+4. NET Core 2.1 SDK
+5. POSTMAN for CRUD operations
+6. Azure or other online PAAS for hosting.
+7. Instructions
+
+## Authors
+* Regan Dufort
+* Dev Shrestha
+* Shalom Belaineh
+* Joseph Pumphrey
+* Raymond Johnson
+
+#Licensing 
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+Bootstrap website
+W3 Schools
+
+## Schema
+![Schema](/Assets/Schema.jpg)  
+>>>>>>> d063f4e2ab96ed92e0c96a2efd1c268230f92408
