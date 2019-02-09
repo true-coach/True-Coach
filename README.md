@@ -57,6 +57,7 @@ The following tests were done:
 MIT Licence (open license)
 
 ## Acknowledgments
-
+For the Gifs https://giphy.com/
+HowardFreeman Motivation from youtube https://youtu.be/EykWcFEtFqo 
 Bootstrap website
 W3 Schools
