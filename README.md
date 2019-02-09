@@ -4,7 +4,7 @@ This app is designed for the everyday user that has a particular fitness goal in
 
 ## Software Requirements 
 Please read out software requirements
-![req](/Requirements.md)  
+* [Requirements](/Requirements.md)  
 
 ## How the App Works
 
@@ -63,4 +63,4 @@ Bootstrap website
 W3 Schools
 
 ## Schema
-![Schema](/Assets/TrueCoach_Content_DB Schema.png)  
+![Schema](Assets/TrueCoach_Content_DB Schema.png)  
