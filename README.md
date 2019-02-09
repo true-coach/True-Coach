@@ -63,4 +63,4 @@ Bootstrap website
 W3 Schools
 
 ## Schema
-![Schema](Assets/TrueCoach_Content_DB Schema.png)  
+![Schema](/TrueCoach_Content_DB Schema.png)  
