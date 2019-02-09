@@ -1,6 +1,11 @@
+
 # True_Coach
 
 This app is designed for the everyday user that has a particular fitness goal in mind. This app will get a user on the right path to achieve their desired goal. The app will provide recommendations for exercises and nutrition to achieve the desired goal. 
+
+https://truecoachbigrig.azurewebsites.net/
+
+![WireFrame](/Assets/TrueCoachApp.jpg)  
 
 ## Software Requirements 
 Please read out software requirements
@@ -29,7 +34,6 @@ Please read out software requirements
 
 ## Testing
 * Testing was conducted on each CRUD operation for each specific model. See XunitTesting folder.
-<<<<<<< HEAD
 
 The following tests were done:
 
@@ -82,9 +86,21 @@ This project is licensed under the MIT License
 ### Anything else you feel is important: expectations around work times, stand-up times(outside of the ones schedule with the instructional team), taking breaks/seeking help when you’re stuck, etc.
 * This is a shared document and changes can be applied as needed. 
 
+## Schema
+![Schema](/Assets/MVCSchema.jpg)  
 
 ## Schema
 ![Schema](/Assets/Schema.jpg)  
+
+## Tables
+* User table holds the name of the User and a unique ID for each user. 
+* Journal table holds the date time stamp and the journal that user wants to store. 
+* Nutrition table holds the goalID and Meals that that user should eat to remain healthy. 
+* Meals table has a foreign key reference to Nutrition Id and the name and description of meals. 
+* Exercise table has a foreign key reference to WorkoutTypeId in WorkoutTable. It has a description of the exercise and a unique ID. 
+* Regeneration table has a unique ID and the regeneratin steps for revival. 
+* Workout table holds the workout goals and the workouttype with the reference to the exercise table. 
+
 
 ## WireFrame
 ![WireFrame](/Assets/WireFrame1.jpg)  
@@ -92,3 +108,4 @@ This project is licensed under the MIT License
 ![WireFrame](/Assets/WireFrame3.jpg)  
 ![WireFrame](/Assets/WireFrame4.jpg)  
 ![WireFrame](/Assets/WireFrame6.jpg)  
+
