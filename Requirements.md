@@ -2,41 +2,51 @@
 
 The vision of our product is help individuals achieve their desired level of fitness or a fitness goal with time in mind.
 
-PURPOSE
+### PURPOSE
 
-The purpose of the app is to provide a roadmap to the desired goal by providing regimented workouts and nutritional guidelines tailored to that goal and time alloted.
+* The purpose of the app is to provide a roadmap to the desired goal by providing regimented workouts and nutritional guidelines tailored to that goal and time alloted.
 
-WHY?
+* WHY?
 
-This product will help ensure that users are provided with proven quality content to create and maintain a healthy lifestyle. By utilizing this app, a user is investing in their health for the future. 
+* This product will help ensure that users are provided with proven quality content to create and maintain a healthy lifestyle. By utilizing this app, a user is investing in their health for the future. 
+
+## MVC User Stories
+
+* As a new user I want to be able to generate new workouts depending on my current goals and have the ability to save it.
+* As a user I want to see regeneration info to be able to have the knowledge to quickly recover from workouts.
+*  As a user, I want to search for my saved workouts by a saved name so that I can quickly navigate to
+* As a user I want the ability to track days I worked out and the days I missed
+* As a SuperUser I want the ability to add new goals and workouts.
+
 
 ## SCOPE
 ## IN
-The web app will give a plan based on workout focus.
-The web app will provide a plan based on nutrition focus.
-The web app will allow a user to have a journal to document progress.
+1. The web app will give a plan based on workout focus.
+2. The web app will provide a plan based on nutrition focus.
+3. The web app will allow a user to have a journal to document progress.
+4. The user will be able to login their name.
 
 ## OUT
-The webapp does not provide information about BMI.
-The webapp does not calculate food intake.
-
+1. The webapp does not provide information about BMI.
+2. The webapp does not calculate food intake.
+3. The webapp will not show the nearest Fitness Center near me.
 
 ## MVP
-Create user profile with a username.
-Allow user to select an Exercise plan based on their focus.
-Have the ability to journal missed workouts, excuses or gratitude on a journal page. 
-Have a nutrition plan given to the user based on their goal.
+1. Create user profile with a username.
+2. Allow user to select an Exercise plan based on their focus.
+3. Have the ability to journal missed workouts, excuses or gratitude on a journal page. 
+4. Have a nutrition plan given to the user based on their goal.
 
 
 ## STRETCH
-Adding a regeneration page.
-Add users to the users page 
-Add progress pictures
-Add personal goals for user
-Add height and weight
-Add body fat percentage
-Add personal lift records
-Add calorie calculator
+* Adding a regeneration page.
+* Add users to the users page 
+* Progress pictures
+* Add personal goals for user
+* Add height and weight
+* Add body fat percentage
+* Add personal lift records
+* Add calorie calculator
 
 
 ## FUNCTIONAL REQUIREMENTS
