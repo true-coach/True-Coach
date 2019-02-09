@@ -4,7 +4,7 @@ This app is designed for the everyday user that has a particular fitness goal in
 
 ## Software Requirements 
 Please read out software requirements
-![](/Requirements.md)  
+![req](/Requirements.md)  
 
 ## How the App Works
 
