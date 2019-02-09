@@ -27,7 +27,7 @@ Please read out software requirements
 5. Use the API endpoints to conduct operations.
 6. Deploy to online web host if desired.
 
-## Tesing
+## Testing
 * Testing was conducted on each CRUD operation for each specific model. See XunitTesting folder.
 
 The following tests were done:
