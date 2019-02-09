@@ -59,8 +59,9 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-Bootstrap website
-W3 Schools
+* Bootstrap website
+* W3 Schools
+* StackOverflow
 
 ### Communication plan: How will your group communicate with each other? What is your strategy for ensuring everyone’s voices are heard, and that contributions from both loud and soft voices are listened to? Do you have a plan for managing psychological safety?
 
