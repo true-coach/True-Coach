@@ -1,4 +1,4 @@
-### True_Coach
+# True_Coach
 
 This app is designed for the everyday user that has a particular fitness goal in mind. This app will get a user on the right path to achieve their desired goal. The app will provide recommendations for exercises and nutrition to achieve the desired goal. 
 
