@@ -12,16 +12,16 @@ The app will provide recommendations for exercises and nutrition to achieve the 
 ![LoginPage](/Assets/TrueCoachApp.jpg) 
 
 ### Register Page
-![LoginPage](/Assets/Register-page.png)  
+![LoginPage](https://github.com/true-coach/True-Coach/blob/master/Assets/Register-Page.PNG)  
 
 ### Workout Page
-![LoginPage](/Assets/Workout-page.png)
+![LoginPage](https://github.com/true-coach/True-Coach/blob/master/Assets/Workout-page.PNG)
 
 ### Nutrition Page
-![LoginPage](/Assets/Nutrition-page.png)  
+![LoginPage](https://github.com/true-coach/True-Coach/blob/master/Assets/Nutrition-page.PNG)  
 
 ### Journal Page
-![LoginPage](/Assets/Journal-page.png)  
+![LoginPage](https://github.com/true-coach/True-Coach/blob/master/Assets/Journal-page.PNG)  
 
 
 ## MVC Schema
@@ -87,5 +87,5 @@ This project is licensed under the MIT License
 
 ## Software Requirements 
 Please read out software requirements
-![Requirements](/Requirements.md)  
+![Requirements](https://github.com/true-coach/True-Coach/blob/master/Requirements.md)  
 
