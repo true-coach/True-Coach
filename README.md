@@ -63,6 +63,8 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
+* For the Gifs https://giphy.com/
+* HowardFreeman Motivation from youtube https://youtu.be/EykWcFEtFqo 
 * Bootstrap website
 * W3 Schools
 * StackOverflow
