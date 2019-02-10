@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrueCoach", "TrueCoach\TrueCoach.csproj", "{8CD13CCC-5462-4FBF-B582-7FCE3311FB65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC-Testing", "MVC-Testing\MVC-Testing.csproj", "{0A082F3F-DBF2-47A2-A26B-A10D0667DFC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mealtesting", "MVC-Testing\Mealtesting.csproj", "{0A082F3F-DBF2-47A2-A26B-A10D0667DFC3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionTest", "NutritionTest\NutritionTest.csproj", "{73639CEC-17D2-4747-BFD1-756D7AB8803A}"
 EndProject
