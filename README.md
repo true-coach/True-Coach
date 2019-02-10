@@ -58,13 +58,13 @@ Here is an image of our API/DB schema
 * Workout table holds the workout goals and the workouttype with the reference to the exercise table. 
 
 ## Tools used for this project
-* 1.Visual Studios 2017 or equivalent C# IDE
-* 2 Entity Framework CORE
-* 3. Microsoft SQL Database.
-* 4. NET Core 2.1 SDK
-* 5. POSTMAN for CRUD operations
-* 6. Azure or other online PAAS for hosting.
-* 7. Instructions
+1.Visual Studios 2017 or equivalent C# IDE
+2 Entity Framework CORE
+3. Microsoft SQL Database.
+4. NET Core 2.1 SDK
+5. POSTMAN for CRUD operations
+6. Azure or other online PAAS for hosting.
+7. Instructions
 
 ## Contributors
 * Regan Dufort
