@@ -12,10 +12,10 @@ The vision of our product is help individuals achieve their desired level of fit
 
 ## MVC User Stories
 
-* As a new user I want to be able to generate new workouts depending on my current goals and have the ability to save it.
-* As a user I want to see regeneration info to be able to have the knowledge to quickly recover from workouts.
-*  As a user, I want to search for my saved workouts by a saved name so that I can quickly navigate to
-* As a user I want the ability to track days I worked out and the days I missed
+* As a new user I want to be able to receive new workouts based on my current goals and have the ability to save it.
+* As a user, I want to see regeneration info to be able to have the knowledge to quickly recover from workouts.
+* As a user, I want to search for my saved workouts by a saved name so that I can quickly navigate to the workout.
+* As a user I want the ability to track days I worked out and the days I missed.
 * As a SuperUser I want the ability to add new goals and workouts.
 
 
@@ -29,12 +29,12 @@ The vision of our product is help individuals achieve their desired level of fit
 ## OUT
 1. The webapp does not provide information about BMI.
 2. The webapp does not calculate food intake.
-3. The webapp will not show the nearest Fitness Center near me.
+3. The webapp will not show the nearest fitness center near me.
 
 ## MVP
 1. Create user profile with a username.
 2. Allow user to select an Exercise plan based on their focus.
-3. Have the ability to journal missed workouts, excuses or gratitude on a journal page. 
+3. Have the ability to journal missed workouts, excuses, or gratitude on a journal page. 
 4. Have a nutrition plan given to the user based on their goal.
 
 
