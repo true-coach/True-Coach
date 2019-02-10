@@ -87,5 +87,5 @@ This project is licensed under the MIT License
 
 ## Software Requirements 
 Please read out software requirements
-![Requirements](https://github.com/true-coach/True-Coach/blob/master/Requirements.md)  
+* [Requirements](https://github.com/true-coach/True-Coach/blob/master/Requirements.md)  
 
